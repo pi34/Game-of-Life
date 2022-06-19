@@ -40,47 +40,30 @@ while True:
                 down = 1
                 
             numAlive = 0
-            numDead = 0
 
             if (i+1 < r and matr[i+1][j] == 1):
                 numAlive+=1
-            else:
-                numDead+=1
 
             if (j+1 < c and matr[i][j+1] == 1):
                 numAlive+=1
-            else:
-                numDead+=1
 
             if (i-1 >= 0 and matr[i-1][j] == 1):
                 numAlive+=1 
-            else:
-                numDead+=1
 
             if (j-1 >= 0 and matr[i][j-1] == 1):
                 numAlive+=1 
-            else:
-                numDead+=1
 
             if (i+1 < r and j-1 >= 0 and matr[i+1][j-1] == 1):
                 numAlive+=1
-            else:
-                numDead+=1
 
             if (i+1 < r and j+1 < c and matr[i+1][j+1] == 1):
                 numAlive+=1
-            else:
-                numDead+=1
 
             if (i-1 >= 0 and j-1 >= 0 and matr[i-1][j-1] == 1):
                 numAlive+=1
-            else:
-                numDead+=1
 
             if (i-1 >= 0 and j+1 < c and matr[i-1][j+1] == 1):
                 numAlive+=1
-            else:
-                numDead+=1
 
             if (matr[i][j] == 0 and numAlive == 3):
                 copMatr[i][j] = 1
